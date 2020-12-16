@@ -1,0 +1,102 @@
+## collection users
+
+username : johndoe
+first_name : "John"
+last_name : "Doe"
+
+username : jenniedoe
+full_name :
+  first : "Jennie"
+  last : "Doe"
+  
+username : willsmith
+full_name :
+  first : "Will"
+  last : "Smith"
+
+username : ssels
+full_name :
+  first : "Sandra"
+  last : "Sells"
+
+## collections posts
+
+username : johndoe
+title : Freaking saturday
+body : Wakes up early and cleans house
+
+username : johndoe
+title : Doing stuff
+body : Raises your credit score
+
+username : johndoe
+title : Reports a bug in your code
+body : Sends you a bug issue
+
+username : jenniedoe
+title : Borrows something
+body : Sells it
+
+username : jenniedoe
+title : Borrows everything
+body : Lost it
+
+username : jenniedoe
+title : Stars your repo on github
+body : Sets to private
+
+username : ssels
+title : Bored
+body : Cleaning is the worst thing in the entire world
+
+username : willsmith
+title : h24 working
+body : Making money
+
+username : willsmith
+title : Doing some great stuff
+body : I love my job
+
+## collection comments
+
+username : johndoe
+comment : Hope you got a good deal!
+post : [post_obj_id]
+
+where [post_obj_id] is the ObjectId of the posts document: "Borrows something"
+
+username : johndoe
+comment : What's mine is yours!
+post : [post_obj_id]
+
+where [post_obj_id] is the ObjectId of the posts document: "Borrows everything"
+
+username : johndoe
+comment : Don't violate the licensing agreement!
+post : [post_obj_id]
+
+where [post_obj_id] is the ObjectId of the posts document: "Stars your repo on github
+
+username : jenniedoe
+comment : It still isn't clean
+post : [post_obj_id]
+
+where [post_obj_id] is the ObjectId of the posts document: "Freaking saturday"
+
+username : jenniedoe
+comment : Denied your PR cause I found a hack
+post : [post_obj_id]
+
+where [post_obj_id] is the ObjectId of the posts document: "Reports a bug in your code"
+
+username : ssels
+comment : Lucky you, my friend
+post : [post_obj_id]
+
+where [post_obj_id] is the ObjectId of the posts document: "Doing some great stuff"
+
+username : ssels
+comment : I wish it was that easy, my friend
+post : [post_obj_id]
+
+where [post_obj_id] is the ObjectId of the posts document: "h24 working"

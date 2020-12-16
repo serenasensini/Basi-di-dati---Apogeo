@@ -1,0 +1,161 @@
+db.farfaraway.insert({nome: 'Shrek', razza: 'Orco', colore: 'Verde'})
+
+db.farfaraway.insert({nome: 'Ciuchino', razza: 'Asino', sesso: 'Maschio'})
+
+db.farfaraway.insert({nome: 'Fiona', razza: 'Principessa', sesso: 'Femmina'})
+
+db.farfaraway.insert({nome: 'Gatto con gli stivali', razza: 'Gatto', sesso: 'Maschio'})
+
+db.farfaraway.insert({nome: 'Draghessa', razza: 'Drago', sesso: 'Femmina'})
+
+db.farfaraway.insert({nome: 'Re Harold', razza: 'Umano', sesso: 'Maschio'})
+
+db.farfaraway.insert({nome: 'Regina Lillian', razza: 'Umano', sesso: 'Femmina'})
+
+db.farfaraway.insert({nome: 'Lord Farquaad', razza: 'Umano', sesso: 'Maschio'})
+
+db.farfaraway.insert({nome: 'Azzurro', razza: 'Umano', sesso: 'Maschio'})
+
+db.farfaraway.insert({nome: 'Fata Madrina', razza: 'Fata', sesso: 'Femmina'})
+
+db.farfaraway.insert({nome: 'Tremotino', razza: 'Elfo', sesso: 'Maschio', occupazione: 'venditore'})
+
+db.farfaraway.insert({nome: 'Omino di zenzero', razza: 'Biscotto', sesso: 'Maschio'})
+
+db.farfaraway.insert({nome: 'Biancaneve', razza: 'Principessa', sesso: 'Femmina'})
+
+db.farfaraway.insert({nome: 'Doris', razza: 'Umano', occupazione: 'Barista'})
+
+db.farfaraway.insert({nome: 'Specchio magico'})
+
+db.farfaraway.insert({nome: 'Pinocchio', razza: 'Burattino', sesso: 'Maschio'})
+
+db.farfaraway.insert({nome: 'Humpty Dumpty', razza: 'Uovo', sesso: 'Maschio'})
+
+db.farfaraway.insert({nome: 'I tre topi ciechi', razza: 'Topo', sesso: 'Maschio'})
+
+db.farfaraway.insert({nome: 'Mongo', razza: 'Biscotto', sesso: 'Maschio'})
+
+// JSON
+[
+{"nome": "Fiona", "razza": "Principessa", "sesso": "Femmina", "eta_stimasta": 20},
+
+{"nome": "Gatto con gli stivali", "razza": "Gatto", "sesso": "Maschio", "eta_stimata": 25},
+
+{"nome": "Draghessa", "razza": "Drago", "sesso": "Femmina", "eta_stimata": 30},
+
+{"nome": "Re Harold", "razza": "Umano", "sesso": "Maschio", "eta_stimata": 50},
+
+{"nome": "Regina Lillian", "razza": "Umano", "sesso": "Femmina", "eta_stimata": 50},
+
+{"nome": "Lord Farquaad", "razza": "Umano", "sesso": "Maschio", "eta_stimata": 30},
+
+{"nome": "Azzurro", "razza": "Umano", "sesso": "Maschio", "eta_stimata": 35},
+
+{"nome": "Fata Madrina", "razza": "Fata", "sesso": "Femmina", "eta_stimata":50},
+
+{"nome": "Tremotino", "razza": "Elfo", "sesso": "Maschio", "occupazione": "venditore", "eta_stimata":100},
+
+{"nome": "Omino di zenzero", "razza": "Biscotto", "sesso": "Maschio"},
+
+{"nome": "Biancaneve", "razza": "Principessa", "sesso": "Femmina", "eta_stimata":18},
+
+{"nome": "Doris", "razza": "Umano", "occupazione": "Barista", "eta_stimata":40},
+
+{"nome": "Specchio magico", "eta_stimata":1000},
+
+{"nome": "Pinocchio", "razza": "Burattino", "sesso": "Maschio", "eta_stimata": 10},
+
+{"nome": "Humpty Dumpty", "razza": "Uovo", "sesso": "Maschio"},
+
+{"nome": "I tre topi ciechi", "razza": "Topo", "sesso": "Maschio", "eta_stimata":70},
+
+{"nome": "Mongo", "razza": "Biscotto", "sesso": "Maschio"}
+]
+
+
+// tutti i personaggi femminili
+db.farfaraway.find({sesso: "Femmina"})
+
+// tutti i personaggi femminili umani
+
+Ricerca di tutti i personaggi femminili
+
+db.farfaraway.find({sesso: "Femmina", sesso: "Femmina"})
+
+// tutti i personaggi maggiorenni
+db.farfaraway.find({eta_stimata: {$gt: 18}})
+
+// tutti i personaggi senza età
+db.farfaraway.find({eta_stimata:{$exists: false}})
+
+// aggiornamento di fiona (sostituzione)
+db.farfaraway.update({nome:"Fiona"}, {eta_stimata: 20})
+db.farfaraway.find({sesso: "Femmina"})
+
+// aggiornamento di Fiona
+db.farfaraway.update({eta_stimata: 20}, {$set: {"nome": "Fiona", "razza": "Principessa", "sesso": "Femmina", "eta_stimata": 20}})
+
+// operatore $in
+db.farfaraway.find({razza:{$in:[ "Principessa", "Umano"]}})
+
+// operatore $or
+db.farfaraway.find({$or:[ {razza: "Principessa"}, {razza: “Umano”} ]})
+
+// uso dell’operatore $inc
+db.farfaraway.update({nome: "Shrek"}, {$inc: {eta: +10}})
+
+// aggiornamento di Shrek
+db.farfaraway.update({nome: "Shrek"}, {$set: {piatti_preferiti:["lumache"]}})
+db.farfaraway.update({nome: "Shrek"}, {$push: {piatti_preferiti:"cacciagione"}})
+
+//upsert update if not exists (else create)
+db.farfaraway.update({nome: "Pinocchio"}, {eta_stimata: 11})
+
+// aggiornamento multiplo
+db.farfaraway.update({}, {$set: {citta: "Molto molto lontano"}}, {multi: true})
+
+// Uso dell’operazione find() con selezione di campi
+db.farfaraway.find({}, {nome: 1})
+
+// Uso dell’operazione find() con selezione di campi senza campo _id
+db.farfaraway.find({}, {nome: 1, _id: 0})
+
+// Ordinamento dei personaggi per nome crescente
+db.farfaraway.find({}, {nome: 1, _id: 0}).sort({nome:  1})
+
+// Limite di 5 risultati
+db.farfaraway.find({}, {nome: 1, _id: 0}).limit(5)
+
+// Uso dell’operazione sort() al termine dell’operazione di find()
+db.farfaraway.find({}, {nome: 1, _id: 0}).sort({nome:  1}).limit(5)
+
+// Cancellare un documento dal nome
+db.farfaraway.remove({nome: "Humpty Dumpty"})
+
+// Cancellare un documento dalla razza
+db.farfaraway.remove({razza: "Biscotto"}, 1)
+
+// Conta dei personaggi per razza
+db.farfaraway.aggregate([{$group:{_id:"$razza", totale: {$sum:1}}}])
+
+// Calcolo del personaggio più anziano di ogni razza
+db.farfaraway.aggregate([{$group:{_id:"$razza", anzianita: {$max:"$eta_stimata"}}}}])
+
+// Calcolo del personaggio più anziano di ogni razza - ordinato
+db.farfaraway.aggregate([{$group:{_id:"$razza", anzianita: {$max:"$eta_stimata"}}}, {$sort:{anzianita:-1}}])
+
+// Creazione di una collezione capped
+db.createCollection("test", {capped: true, size: 33603008})
+
+// Creazione di una collezione capped con max numero documenti
+db.createCollection("test", {capped: true, size: 33603008, max: 33000})
+
+// Relazione sposato_con
+db.farfaraway.find({}, {nome:1})
+db.farfaraway.update({nome: "Shrek"}, {$set: {sposato_con:[{ObjectId("5fa8702e4f660e19f477a594")}]}})
+db.farfaraway.update({nome: "Shrek"}, {$set: {indirizzo:[{citta: "Molto molto lontano", via: "via della Palude 33"}]}})
+db.farfaraway.find({nome:"Shrek"}, {indirizzo:1})
+
+db.farfaraway.update({nome: "Shrek"}, {$set: {sposato_con:[{ObjectId: "5fa8702e4f660e19f477a594"}]}})
+db.farfaraway.update({nome: "Shrek"}, {$set: {sposato_con:[{ObjectId: "5fa8702e4f660e19f477a594", nome: "Fiona"}]}})

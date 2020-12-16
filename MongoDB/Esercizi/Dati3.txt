@@ -1,0 +1,72 @@
+[
+  {
+    "descrizione": "pantofole",
+    "categoria": "abbigliamento",
+    "prezzo": 9.99
+  },
+  {
+    "descrizione": "set di penne",
+    "categoria": "cartoleria",
+    "prezzo": 2
+  },
+  {
+    "descrizione": "felpa",
+    "categoria": "abbigliamento",
+    "prezzo": 22.50
+  },
+  {
+    "descrizione": "ventilatore",
+    "categoria": "casa",
+    "prezzo": 50
+  },
+  {
+    "descrizione": "set di quaderni",
+    "categoria": "cartoleria",
+    "prezzo": 4
+  },
+  {
+    "descrizione": "appendiabiti",
+    "categoria": "casa",
+    "prezzo": 30
+  },
+  {
+    "descrizione": "carta",
+    "categoria": "casa",
+    "prezzo": 2
+  },
+  {
+    "descrizione": "cavo usb",
+    "categoria": "casa",
+    "prezzo": 8
+  },
+  {
+    "descrizione": "banana",
+    "categoria": "alimentari",
+    "prezzo": 1
+  },
+  {
+    "descrizione": "ananas",
+    "categoria": "alimentari",
+    "prezzo": 3
+  },
+  {
+    "descrizione": "pasta",
+    "categoria": "alimentari",
+    "prezzo": 0.5
+  },
+  {
+    "descrizione": "riso",
+    "categoria": "alimentari",
+    "prezzo": 1.5
+  },
+  {
+    "descrizione": "lattuga",
+    "categoria": "alimentari",
+    "prezzo": 0.99
+  },
+  {
+    "descrizione": "orata",
+    "categoria": "alimentari",
+    "prezzo": 14.99
+  }
+]

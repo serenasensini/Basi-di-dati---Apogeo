@@ -1,0 +1,140 @@
+titolo : Nightmare - Dal profondo della notte
+regista : Wes Craven
+anno : 1984
+genere: horror, splatter
+
+titolo : Cry Baby
+regista : John Waters
+anno : 1990
+
+titolo : Edward mani di forbice
+regista : Tim Burton
+anno : 1990
+genere: drammatico, romantico
+
+titolo : Donnie Brasco
+regista : Mike Newell
+anno : 1997
+
+titolo : Paura e delirio a Las Vegas
+regista : Terry Gilliam
+anno : 1998
+
+titolo : La nona porta
+regista : Roman Polanski
+anno : 1999
+
+titolo : Il mistero di Sleepy Hollow
+regista : Tim Burton
+anno : 1999
+attori : [
+  Johnny Depp
+  Christina Ricci
+]
+
+titolo : Chocolat
+regista : Lasse Hallstrom
+anno : 2000
+genere: romantico
+
+titolo : Blow
+regista : Ted Demme
+anno : 2001
+sinossi: La vera storia di George Jung che diventa, negli anni Settanta, il punto di riferimento negli USA per il traffico della cocaina colombiana per conto di Pablo Escobar. L'inarrestabile ascesa lo porta ad avere tanti soldi ma altrettanti nemici.
+
+titolo : La vera storia di Jack lo squartatore
+regista : Allen e Albert Hughes
+anno : 2001
+
+titolo : La maledizione della prima luna
+regista : Gore Verbiski
+anno : 2003
+
+titolo : Secret Windows
+regista : Robert Rodriguez
+anno : 2003
+
+titolo : Neverland
+regista : Marc Forster
+anno : 2004
+genere: drammatico
+
+titolo : La fabbrica di cioccolato
+regista : Tim Burton
+anno : 2005
+genere: fantastico
+
+titolo: Pirati dei Caraibi - La maledizione del forziere fantasma
+regista: Gore Verbiski
+anno: 2006
+sinossi: Jack Sparrow ha contratto un debito con Davey Jones e la sua ciurma di marinai. Se non vuole servire per l'eternità il capitano della nave fantasma, Jack deve assolutamente trovare una soluzione.
+
+titolo : Sweeney Todd
+regista : Tim Burton
+anno : 2007
+genere: musical, horror
+
+titolo : Parnassus 
+regista : Terry Gilliam
+anno : 2009
+
+titolo : Nemico Pubblico
+regista : Michael Mann
+anno : 2009
+attori:[
+	Johnny Depp
+	Channing Tatum
+]
+
+titolo : Alice in Wonderland
+regista : Tim Burton
+anno : 2010
+attori: []
+
+titolo: Avatar
+
+titolo : The Tourist
+regista : Florian Henckel von Donnersmarck
+anno : 2010
+attori : [
+  Johnny Depp
+  Angelina Jolie
+  Christian De Sica
+]
+genere: azione
+
+titolo : The Lone Ranger
+regista : Gore Verbiski
+anno : 2013
+
+titolo : Transcendence
+regista : Wally Pfister
+anno : 2014
+
+titolo : Animali fantastici e dove trovarli
+regista : David Yates
+anno : 2016
+attori : [
+  Johnny Depp
+  Eddie Redmayne
+]
+genere: fantasy
+
+titolo : Assassinio sull'Orient Express
+regista : Kenneth Branagh
+anno : 2017
+attori : [
+  Johnny Depp
+  Kenneth Branagh
+  Judi Dench
+]
+
+titolo : Animali fantastici - I crimini di Grindelwald
+regista : David Yates
+anno : 2018
+attori : [
+  Johnny Depp
+  Eddie Redmayne
+  Jude Law
+]
+genere: fantasy
