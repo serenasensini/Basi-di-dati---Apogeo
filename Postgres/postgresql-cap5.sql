@@ -1213,4 +1213,44 @@ INSERT INTO scontrino(codice_negozio,codice_prodotto,data_acquisto,codice_client
 INSERT INTO scontrino(codice_negozio,codice_prodotto,data_acquisto,codice_cliente) VALUES (4,75,'2018-11-22',2);
 
 -- Query
+--Calcolare i clienti che effettuano una spesa inferiore a 200 euro complessive nell’ultimo mese
+SELECT cl.codice, cl.cognome, SUM(pr.prezzo)
+FROM prodotto pr 
+JOIN scontrino sc ON pr.codice = sc.codice_prodotto
+JOIN cliente cl ON cl.codice = sc.codice_cliente
+WHERE sc.data_acquisto = '2020-10-01'
+GROUP BY cl.codice
+HAVING SUM(pr.prezzo) < 200
 
+-- Calcolare la media dei guadagni in un certo periodo per un determinato negozio
+SELECT SUM(pr.prezzo) AS “Totale”
+FROM scontrino sc JOIN prodotto pr ON sc.codice_prodotto = pr.codice
+JOIN negozio ne ON sc.codice_negozio = ne.codice
+WHERE ne.codice = 1
+AND data_acquisto BETWEEN '2018-01-01' AND '2020-12-31';
+
+CREATE OR REPLACE FUNCTION totGuadagniNegozioPeriodo (negozio int, periodo_da date, periodo_a date) 
+RETURNS numeric 
+language plpgsql
+as $$
+DECLARE tot_guadagni numeric;
+BEGIN
+SELECT SUM(pr.prezzo)
+INTO tot_guadagni
+FROM scontrino sc JOIN prodotto pr ON sc.codice_prodotto = pr.codice
+JOIN negozio ne ON sc.codice_negozio = ne.codice
+WHERE ne.codice = negozio
+AND data_acquisto BETWEEN periodo_da AND periodo_a;
+RETURN tot_guadagni;
+END;$$;
+
+
+-- Verificare se esiste un prodotto
+CREATE PROCEDURE GetAllProductsBySubname(   Prodotto varchar(50))
+LANGUAGE SQL
+AS $$
+ SELECT *
+FROM prodotto
+WHERE descrizione LIKE '%Prodotto%'
+$$;
+call GetAllProductsBySubname(“an”);
