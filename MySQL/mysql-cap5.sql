@@ -680,7 +680,7 @@ SELECT c.nome, AVG(e.votazione)
 FROM esame AS e LEFT JOIN corso AS c ON e.codice_corso = c.codice
 WHERE c.codice = 50256
 AND e.data_esame BETWEEN '2018-01-01' AND '2018-12-31'
-
+GROUP BY c.nome
 
 -- Media dei voti in un certo periodo per ogni corso
 SELECT c.nome, AVG(e.votazione)
@@ -782,3 +782,6 @@ FROM studente s
 LEFT JOIN esame e ON s.matricola = e.matricola_studente
 LEFT JOIN corso c ON e.codice_corso = c.codice
 GROUP BY c.nome
+
+-- Esecuzione della vista
+SELECT * FROM numero_iscritti_corso
